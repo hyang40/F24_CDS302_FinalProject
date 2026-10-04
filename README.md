@@ -7,7 +7,7 @@ A normalized SQLite movie database built from six independent Kaggle datasets, d
 
 **📦 Database file:** [Download the final `.db` (Google Drive)](https://drive.google.com/file/d/1Hy-41lgQeHoT8DTi6KUzMGY-hIju1-bG/view?usp=drive_link)
 
-<!-- Add the ER diagram here: ![ER diagram](images/erd.png) -->
+![Relational schema of the movie database: 5 entity tables and 2 junction tables](images/erd.png)
 
 ---
 
@@ -41,7 +41,7 @@ Six public Kaggle datasets, integrated into one database:
 | Movie ↔ Genre | M : N | Junction table `Movie_Genre` (composite PK) |
 | Movie → Review | 1 : N | `Movie_ID` foreign key in `Review` |
 
-**2. Relational schema**: E-R model reduced to 7 tables
+**2. Relational schema**: E-R model reduced to 7 tables (full DDL in [`schema.sql`](schema.sql))
 
 ```
 Movie       (Movie_ID PK, Title, Year, IMDB_Rating, Metascore, Box_Office, Time_Minute, Votes, Director_ID FK)
@@ -106,7 +106,9 @@ ORDER BY GM.Max_Rating DESC;
 | File | Description |
 |---|---|
 | `movie.db` | Final SQLite database (also on [Google Drive](https://drive.google.com/file/d/1Hy-41lgQeHoT8DTi6KUzMGY-hIju1-bG/view?usp=drive_link)) |
+| `schema.sql` | `CREATE TABLE` statements for all 7 tables, with primary and foreign keys |
 | `queries.sql` | The five analysis queries |
+| `images/erd.png` | Relational schema diagram (dbdiagram.io) |
 | `data/` | Source CSVs (BoxOfficeCollections, Director, Genre, names, OldActor, rating_rottentomatto, titles) |
 | `CDS_302_Final_Research_Report.pdf` | Final research report |
 | `CDS_302_Project_movies.pdf` | Presentation slides |
