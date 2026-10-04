@@ -7,7 +7,7 @@ A normalized SQLite movie database built from six independent Kaggle datasets, d
 
 **📦 Database file:** [Download the final `.db` (Google Drive)](https://drive.google.com/file/d/1Hy-41lgQeHoT8DTi6KUzMGY-hIju1-bG/view?usp=drive_link)
 
-![Relational schema of the movie database: 5 entity tables and 2 junction tables](images/ERD.png)
+![Relational schema of the movie database: 5 entity tables and 2 junction tables](ERD.png)
 
 ---
 
